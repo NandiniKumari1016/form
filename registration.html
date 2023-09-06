@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register Page</title>
+</head>
+<body class="body">
+    <div class="contain">
+     <div class="title">Hotel Booking Registration Form</div>
+     <div class="titles">Customer Information</div>
+     <form action="">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">
+                 Customer Name:
+                </span>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+                <span class="details">
+                 Check-in Date:
+                </span>
+                <input type="date" placeholder="" required>
+            </div>
+            <div class="input-box">
+                <span class="details">
+                 Total No Of Days:
+                </span>
+                <input type="number" placeholder="" required id="no-of-days">
+            </div>
+            <div class="input-box">
+                <span class="details">
+                    Total No Of Persons:
+                </span>
+                <input type="number" placeholder="" required>
+            </div>
+     </div>
+   
+      
+    
+     <div class="titles">Room Information</div>
+     <div class="sub-title">Room Type:
+        <input type="radio" name="room" value="Delux Room" id="delux-room" >
+            <span class="room-type">Delux Room</span>
+            <input type="radio" name="room" value="Suite Room" id="suite-room">
+            <span class="room-type">Suite Room</span>
+            Amenities Type:
+            <input type="radio" name="amenities" value="ac" id="ac-room">
+            <span class="amenitie-type">AC</span>
+            <input type="radio" name="amenities" value="locker" id="locker">
+            <span class="amenitie-type">Locker</span>
+ 
+     </div>
+    
+    <div class="sub-title">
+        Room Rate:
+        <div class="room-rate">
+            <label for="">Delux Room: <b>Rs2500/-</b></label>
+           <label for=""> Suite Room: <b>Rs4000/-</b></label></label>
+           <label for=""> AC: <b>Rs1000/-</b></label>
+            <label for="">Locker: <b>Rs300/-</b></label>
+        </div>
+    </div>
+    <div class="titles">Advance Payment</div>
+    <div class="input-box">
+        <span class="advance-payment">
+            Advance Amount:
+        </span>
+        <input type="number" placeholder="Enter the amount here" required>
+    </div>
+    <div class="titles">Balance Amount
+            <input type="number" id="balance-amount" placeholder="Rs/-">
+    </div>
+      
+    <div class="titles">Total Amount</div>
+    <div class="cost">
+        <div>
+            <span>
+            Total Room Cost:
+            </span>
+            <input type="" placeholder="Rs/-" id="room-cost">
+        </div>
+        <div>
+            <span>
+           Total Amenities Cost:
+            </span>
+            <input type="" placeholder="Rs/-" id="amenities-cost">
+        </div>
+
+    </div>
+    <div class="total-cost">
+        <span>
+      Total Cost:
+        </span>
+        <input type="" placeholder="Rs/-" id="total-amount">
+    </div>
+    <div class="titles">Additional Charges</div>
+    <div class="charge">
+        <div>
+            <span>
+                Upto 2 people:<b>  No Change in Cost</b>
+            </span>
+            <span class="one">
+                Per Day Cost For Extra Person:<b>  Rs1000/-</b>
+             </span>
+        </div>
+    </div>
+    <div class="button" onclick="roomcost()">
+        <input type="submit"  value="Register">
+    </div>
+        </div>
+     </form>
+
+     <!-- javascript code -->
+
+     <script>
+          function roomcost(){
+            var deluxroom = 2500;
+            var suiteroom = 4000;
+            var room ;
+            var numofdays = document.getElementById('no-of-days').value;
+            if(room == deluxroom){
+             document.write (deluxroom * numofdays);
+            }else{
+            return  suiteroom * numofdays;
+            }
+          }
+
+     </script>
+</body>
+</html>
